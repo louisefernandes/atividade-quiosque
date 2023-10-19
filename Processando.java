@@ -16,14 +16,19 @@ public class Processando implements QuiosqueState {
     }
 
     public void informarCartao(String cartao) {
-        // Lógica para informar o cartão e obter autorização
-        // Se for aprovado, avança para o estado Inscrito
-        quiosque.setState(new Inscrito(quiosque, minicursoSelecionado));
-        System.out.println("Cartão de crédito autorizado.");
+        if (minicursoSelecionado != null) {
+            quiosque.setState(new Inscrito(quiosque, minicursoSelecionado));
+            System.out.println("Cartão de crédito autorizado.");
+        } else {
+            System.out.println("Por favor, escolha um minicurso antes de informar o cartão.");
+        }
     }
 
     public void finalizar() {
-        // Ação não permitida no estado Processando
         System.out.println("Aguarde a autorização do cartão de crédito antes de finalizar.");
+    }
+
+    public QuiosqueState getState() {
+        return this;
     }
 }

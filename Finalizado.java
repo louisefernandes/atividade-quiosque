@@ -20,5 +20,9 @@ public class Finalizado implements QuiosqueState {
     public void finalizar() {
         System.out.println("A operação já foi finalizada. Obrigado!");
     }
+
+    public QuiosqueState getState() {
+        return this;
+    }
 }
 

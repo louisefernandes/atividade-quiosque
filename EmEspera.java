@@ -6,12 +6,11 @@ public class EmEspera implements QuiosqueState {
     }
 
     public void identificarAluno(String matricula) {
-        
         if (matriculaValida(matricula)) {
-           
-            quiosque.setState(new Identificado(quiosque));
+            quiosque.setState(new Identificado(quiosque, matricula));
+            System.out.println("Aluno identificado com sucesso.");
         } else {
-            System.out.println("Matrícula inválida. Por favor, insira uma matrícula válida.");
+            System.out.println("Matrícula inválida. Por favor, insira uma matrícula válida com 3 dígitos.");
         }
     }
 
@@ -28,8 +27,14 @@ public class EmEspera implements QuiosqueState {
     }
 
     private boolean matriculaValida(String matricula) {
-        // Verifica a validade da matrícula
-        // Implemente sua lógica de validação aqui
-        return true;
+        if (matricula.length() == 3 && matricula.matches("\\d+")) {
+            return true;
+        }
+        return false;
+    }
+
+    public QuiosqueState getState() {
+        return this;
     }
 }
+

@@ -24,5 +24,10 @@ public class Quiosque {
     public void finalizar() {
         state.finalizar();
     }
+    
+    public QuiosqueState getState() {
+        return state;
+    }
+    
 }
 

@@ -3,4 +3,6 @@ public interface QuiosqueState {
     void escolherMinicurso(String minicurso);
     void informarCartao(String cartao);
     void finalizar();
+    QuiosqueState getState();
 }
+

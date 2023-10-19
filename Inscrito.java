@@ -20,8 +20,11 @@ public class Inscrito implements QuiosqueState {
     }
 
     public void finalizar() {
-        // Ação para gerar o ticket e avançar para o estado Finalizado
         System.out.println("Gerando ticket para o minicurso " + minicursoSelecionado);
         quiosque.setState(new Finalizado(quiosque));
+    }
+
+    public QuiosqueState getState() {
+        return this;
     }
 }
