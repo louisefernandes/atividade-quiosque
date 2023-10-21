@@ -34,6 +34,7 @@ public class EmEspera implements QuiosqueState {
     }
 
     public QuiosqueState getState() {
+        
         return this;
     }
 }

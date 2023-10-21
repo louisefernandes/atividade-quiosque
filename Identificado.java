@@ -8,6 +8,7 @@ public class Identificado implements QuiosqueState {
     }
 
     public void identificarAluno(String matricula) {
+        
         if (matriculaValida(matricula)) {
             this.matricula = matricula; 
             System.out.println("Você já está identificado como aluno.");

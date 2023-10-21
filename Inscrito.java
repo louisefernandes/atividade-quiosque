@@ -25,6 +25,7 @@ public class Inscrito implements QuiosqueState {
     }
 
     public QuiosqueState getState() {
+        
         return this;
     }
 }

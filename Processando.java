@@ -12,6 +12,7 @@ public class Processando implements QuiosqueState {
     }
 
     public void escolherMinicurso(String minicurso) {
+        
         System.out.println("Você já escolheu o minicurso: " + minicursoSelecionado);
     }
 

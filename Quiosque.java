@@ -25,6 +25,7 @@ public class Quiosque {
         state.finalizar();
     }
     
+    
     public QuiosqueState getState() {
         return state;
     }
