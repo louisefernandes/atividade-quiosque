@@ -1,10 +1,15 @@
 public class Quiosque {
     private QuiosqueState state;
+    private MatriculaRepository matriculaRepository;
 
     public Quiosque() {
         state = new EmEspera(this);
+        matriculaRepository = new MatriculaRepository();
+        
+        matriculaRepository.adicionarMatricula("123");
+        matriculaRepository.adicionarMatricula("111");
+        matriculaRepository.adicionarMatricula("222");
     }
-
     public void setState(QuiosqueState state) {
         this.state = state;
     }

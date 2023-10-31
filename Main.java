@@ -16,10 +16,17 @@ public class Main {
                 System.out.println("3. Informar Cartão de Crédito");
                 System.out.println("4. Finalizar");
 
-                int escolha = scanner.nextInt();
-                scanner.nextLine();
+                int opcao;
+                try {
+                    opcao = scanner.nextInt();
+                    scanner.nextLine();
+                } catch (java.util.InputMismatchException e) {
+                    System.out.println("Opção inválida. Digite um número válido.");
+                    scanner.nextLine(); // Limpar o buffer
+                    continue;
+                }
 
-                switch (escolha) {
+                switch (opcao) {
                     case 1:
                         if (quiosque.getState() instanceof EmEspera) {
                             System.out.println("Digite sua matrícula (Formato de 3 números): ");
