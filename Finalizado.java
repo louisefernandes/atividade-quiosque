@@ -5,24 +5,9 @@ public class Finalizado implements QuiosqueState {
         this.quiosque = quiosque;
     }
 
-    public void identificarAluno(String matricula) {
-        System.out.println("A operação já foi finalizada.");
-    }
-
-    public void escolherMinicurso(String minicurso) {
-        System.out.println("A operação já foi finalizada.");
-    }
-
-    public void informarCartao(String cartao) {
-        System.out.println("A operação já foi finalizada.");
-    }
-
-    public void finalizar() {
-        System.out.println("A operação já foi finalizada. Obrigado!");
-    }
-
-    public QuiosqueState getState() {
-        return this;
+    public String proximoState(){
+        this.quiosque.setState(new EmEspera(quiosque));
+        return "Finalizado.";
     }
 }
 
