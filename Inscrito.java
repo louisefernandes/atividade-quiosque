@@ -13,4 +13,8 @@ public class Inscrito implements QuiosqueState {
         String ticket = this.quiosque.getAluno().getMatricula() + random.nextInt(300);
         return "Seu ticket é : " + ticket;
     }
+
+    public String toString(){
+        return "Estado Atual: INSCRITO";
+    }
 }

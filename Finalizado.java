@@ -9,5 +9,9 @@ public class Finalizado implements QuiosqueState {
         this.quiosque.setState(new EmEspera(quiosque));
         return "Finalizado.";
     }
+
+    public String toString(){
+        return "Estado Atual: FINALIZADO";
+    }
 }
 

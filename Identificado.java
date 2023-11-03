@@ -7,8 +7,16 @@ public class Identificado implements QuiosqueState {
 
     @Override
     public String proximoState() {
-        this.quiosque.setState(new Processando(quiosque));
-        return "Processando...";
+        if(this.quiosque.getCurso().adicionarAluno(this.quiosque.getAluno().getMatricula())){
+            this.quiosque.setState(new Processando(quiosque));
+            return "Processando...";
+        }
+        this.quiosque.setState(new EmEspera(quiosque));
+        return "Curso Escolhido Esgotado";
+    }
+
+    public String toString(){
+        return "Estado Atual: IDENTIFICADO";
     }
 
 }

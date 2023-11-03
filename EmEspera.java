@@ -10,5 +10,9 @@ public class EmEspera implements QuiosqueState {
         this.quiosque.setState(new Identificado(quiosque));
         return "Aluno Identificado.";
     }
+
+    public String toString(){
+        return "Estado Atual: EM ESPERA";
+    }
 }
 

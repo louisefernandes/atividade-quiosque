@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Curso {
     private String nome;
     private float preco;
-    private List<String> matriculados;
+    private List<String> matriculados = new ArrayList<String>();
 
     public Curso(String nome, float preco){
         this.nome = nome;

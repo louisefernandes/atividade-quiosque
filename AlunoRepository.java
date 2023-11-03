@@ -20,5 +20,9 @@ public class AlunoRepository {
         }
         throw new Exception("Aluno não encontrado");
     }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
 }
 

@@ -41,6 +41,10 @@ public class Quiosque {
         return cursos;
     }
 
+    public AlunoRepository getAlunos() {
+        return alunos;
+    }
+
     public String identificarAluno(String matricula) throws Exception{
         try{
             this.aluno = alunos.validarAluno(matricula);

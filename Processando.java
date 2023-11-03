@@ -17,4 +17,8 @@ public class Processando implements QuiosqueState {
         return "Cartão de Crédito Negado"; 
     }
 
+    public String toString(){
+        return "Estado Atual: PROCESSANDO";
+    }
+
 }
