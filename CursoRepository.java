@@ -14,7 +14,7 @@ public class CursoRepository {
 
     public Curso getCursoPorNome(String nome) throws Exception{ 
         for (Curso curso : cursos){
-            if(curso.getNome() == nome){
+            if(curso.getNome().equals(nome)){
                 return curso;
             }
         }

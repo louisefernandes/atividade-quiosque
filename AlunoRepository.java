@@ -14,7 +14,7 @@ public class AlunoRepository {
 
     public Aluno validarAluno(String matricula) throws Exception {
         for(Aluno aluno: alunos){
-            if (aluno.getMatricula()==matricula) {
+            if (aluno.getMatricula().equals(matricula)) {
                 return aluno;
             }
         }
